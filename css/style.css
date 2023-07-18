@@ -260,12 +260,21 @@ a {
   .image-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0;
+    grid-template-rows: 1fr 1fr;
     margin: 10px 0px 10px 0px;
   }
 
   .image-container img {
     margin-bottom: 10px;
+  }
+}
+
+@media(max-width:768px) {
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
   }
 }
 
@@ -315,6 +324,18 @@ a {
     margin: 0;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+}
+
+@media(max-width:768px) {
+  .travel-image {
+    width: 400px;
+    height: 266px;
+  }
+
+  .travels-container iframe {
+    height: 266px;
+    margin: 0;
   }
 }
 
@@ -415,10 +436,14 @@ footer svg:hover {
   .gear-card {
     margin: 10px 0px 10px 0px;
   }
+}
 
-
-
-
+@media(max-width:768px) {
+  .image-container-gear {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }
 
 .about-container {
@@ -464,6 +489,39 @@ footer svg:hover {
   margin-right: 20px;
   margin-left: 20px;
   border-radius: 20px;
+}
+
+@media(max-width:768px) {
+  .side-image {
+    display: none;
+  }
+}
+
+@media(max-width:320px) {
+  .about-container {
+    margin: 40px 10px 40px 10px;
+  }
+
+  .about-text {
+    font-size: 10px;
+  }
+
+  .middle-image {
+    display: none;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+
+  }
+
+  .side-image {
+    display: block; 
+  }
 }
 
 .contact-container {
@@ -601,4 +659,42 @@ footer svg:hover {
   object-fit: contain;
 }
 
+@media(max-width:768px) {
+  .contact-container {
+    margin: 40px 10px 40px 10px;
+  }
 
+  .contact-container img {
+    display: none;
+  }
+
+  .form-buttons-container {
+    width: 100%;
+  }
+}
+
+@media(max-width:320px) {
+  .form-container {
+    width: 300px;
+    padding: 15px 5px;
+    font-size: 12px;
+  }
+
+  .formulario {
+    display: grid;
+
+  }
+
+  .form-container form input {
+    width: 265px;
+  }
+
+  .form-container textarea {
+    width: 265px;
+  }
+
+  .form-buttons-container {
+    width: 100%;
+  }
+
+}
